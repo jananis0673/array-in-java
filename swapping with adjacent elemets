@@ -1,0 +1,22 @@
+//swapping with adjacent elements
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < size-1; i += 2) {
+            int temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+        }
+        for (int x:arr) {
+            System.out.print(x+ " ");
+        }
+
+        sc.close();
+    }
+}
