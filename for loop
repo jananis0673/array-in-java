@@ -1,12 +1,15 @@
 
 import java.util.*;
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a;
-        for(a=1; a<=10; System.out.println(a)) {
-            a++;
-        }   
+        int a = sc.nextInt();
+        int sum = 0;
+        for(int i=1; i<=a/2; i++) {
+            if(a%i==0) {
+                sum=sum+i;
+            }
+        }
+        System.out.println((sum==a)?"Perfect":"Not perfect");
     }
 }
